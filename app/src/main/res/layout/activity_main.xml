@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.a1573595.clockslider.ClockSlider
+        android:id="@+id/clockSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cc_endHour="7"
+        app:cc_fillColor="?attr/colorPrimary"
+        app:cc_startHour="10"
+        app:cc_tickTextColor="?android:attr/textColorPrimary"
+        app:cc_startIconResource="@drawable/ic_moon"
+        app:cc_endIconResource="@drawable/ic_sun"
+        tools:cc_endHour="5"
+        tools:cc_startHour="8" />
+
+    <Button
+        android:id="@+id/btnAddHR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="Add Hour" />
+
+    <Button
+        android:id="@+id/btnEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Enable" />
+</LinearLayout>
