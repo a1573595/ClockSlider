@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -15,13 +14,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:cc_endHour="7"
+        app:cc_endIconResource="@drawable/oval_white"
         app:cc_fillColor="?attr/colorPrimary"
+        app:cc_metricMode="clock"
         app:cc_startHour="10"
-        app:cc_tickTextColor="?android:attr/textColorPrimary"
-        app:cc_startIconResource="@drawable/ic_moon"
-        app:cc_endIconResource="@drawable/ic_sun"
-        tools:cc_endHour="5"
-        tools:cc_startHour="8" />
+        app:cc_startIconResource="@drawable/oval_white"
+        app:cc_tickTextColor="?android:attr/textColorPrimary" />
 
     <Button
         android:id="@+id/btnAddHR"

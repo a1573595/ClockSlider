@@ -8,8 +8,8 @@
 </div>
 
 <div style="dispaly:flex">
-    <img src="https://user-images.githubusercontent.com/25738593/140451559-6793f4a1-3221-4809-b43b-bf6fd9e36a93.jpg" width="32%">
-	<img src="https://user-images.githubusercontent.com/25738593/140451562-cd77f2c5-86e9-4321-8983-9b2df8fb877e.jpg" width="32%">
+    <img src="https://user-images.githubusercontent.com/25738593/140847972-c87b47a1-4623-4394-b7ed-5d55997888ec.jpg" width="32%">
+	<img src="https://user-images.githubusercontent.com/25738593/140847974-819b9980-3867-4e1a-b8e7-0e6693f50417.jpg" width="32%">
 </div>
 
 ## 支援Android版本
@@ -40,11 +40,12 @@ dependencies {
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cc_endHour="7"
+    app:cc_endIconResource="@drawable/oval_white"
     app:cc_fillColor="?attr/colorPrimary"
+    app:cc_metricMode="clock"
     app:cc_startHour="10"
-    app:cc_tickTextColor="?android:attr/textColorPrimary"
-    app:cc_startIconResource="@drawable/ic_moon"
-    app:cc_endIconResource="@drawable/ic_sun" />
+    app:cc_startIconResource="@drawable/oval_white"
+    app:cc_tickTextColor="?android:attr/textColorPrimary" />
 ```
 
 設定監聽器。
@@ -59,6 +60,21 @@ binding.clockSlider.setOnTimeChangedListener(object : ClockSlider.OnTimeChangedL
     }
 })
 ```
+
+## 屬性
+| 屬性 | 類別 | 默認值 | 說明 |
+| :------| :------ | :------ | :------ |
+| cc_borderWidth | dimension | 72f | 邊框寬度 |
+| cc_metricTextSize | dimension | 130f | 度量文字大小 |
+| cc_borderColor | color | #CCCCCC | 邊框顏色 |
+| cc_fillColor | color | #FFFF00 | 邊框填充顏色 |
+| cc_tickTextColor | color | #000000 | 刻度文字顏色 |
+| cc_startIconResource | reference | android.R.drawable.btn_star_big_on | 起始圖示資源 |
+| cc_endIconResource | reference | android.R.drawable.btn_star_big_off | 結束圖示資源 |
+| cc_is24HR | boolean | false | 12或24小時 |
+| cc_startHour | float | 0f | 開始時間 |
+| cc_endHour | float | 0f | 結束時間 |
+| cc_metricMode | enum | counter | 度量文字模式 |
 
 ## 參考
 [HGCircularSlider](https://github.com/HamzaGhazouani/HGCircularSlider)

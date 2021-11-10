@@ -8,8 +8,8 @@ A custom clock view with a circular slider.
 </div>
 
 <div style="dispaly:flex">
-    <img src="https://user-images.githubusercontent.com/25738593/140451559-6793f4a1-3221-4809-b43b-bf6fd9e36a93.jpg" width="32%">
-	<img src="https://user-images.githubusercontent.com/25738593/140451562-cd77f2c5-86e9-4321-8983-9b2df8fb877e.jpg" width="32%">
+    <img src="https://user-images.githubusercontent.com/25738593/140847972-c87b47a1-4623-4394-b7ed-5d55997888ec.jpg" width="32%">
+	<img src="https://user-images.githubusercontent.com/25738593/140847974-819b9980-3867-4e1a-b8e7-0e6693f50417.jpg" width="32%">
 </div>
 
 ## Supported Android Versions
@@ -40,11 +40,12 @@ Define ClockSlider on your xml.
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cc_endHour="7"
+    app:cc_endIconResource="@drawable/oval_white"
     app:cc_fillColor="?attr/colorPrimary"
+    app:cc_metricMode="clock"
     app:cc_startHour="10"
-    app:cc_tickTextColor="?android:attr/textColorPrimary"
-    app:cc_startIconResource="@drawable/ic_moon"
-    app:cc_endIconResource="@drawable/ic_sun" />
+    app:cc_startIconResource="@drawable/oval_white"
+    app:cc_tickTextColor="?android:attr/textColorPrimary" />
 ```
 
 Set listener.
@@ -59,6 +60,21 @@ binding.clockSlider.setOnTimeChangedListener(object : ClockSlider.OnTimeChangedL
     }
 })
 ```
+
+## Attribute
+| Attribute | Type | Default | Description |
+| :------| :------ | :------ | :------ |
+| cc_borderWidth | dimension | 72f | border width |
+| cc_metricTextSize | dimension | 130f | metric text size |
+| cc_borderColor | color | #CCCCCC | border color |
+| cc_fillColor | color | #FFFF00 | border fill color |
+| cc_tickTextColor | color | #000000 | tick text color |
+| cc_startIconResource | reference | android.R.drawable.btn_star_big_on | start icon resource |
+| cc_endIconResource | reference | android.R.drawable.btn_star_big_off | end icon resource |
+| cc_is24HR | boolean | false | 12HR or 24HR |
+| cc_startHour | float | 0f | start hour |
+| cc_endHour | float | 0f | end hour |
+| cc_metricMode | enum | counter | metric text mode |
 
 ## Reference
 [HGCircularSlider](https://github.com/HamzaGhazouani/HGCircularSlider)
