@@ -188,7 +188,7 @@ class ClockSlider @JvmOverloads constructor(
         fun onEndChanged(hour: Int, minute: Int)
     }
 
-    private var timeChangeListener: OnTimeChangedListener? = null
+    private var timeChangedListener: OnTimeChangedListener? = null
 
     init {
         decimalFormat.roundingMode = RoundingMode.HALF_UP
@@ -264,7 +264,7 @@ class ClockSlider @JvmOverloads constructor(
                 if (isInStartIcon) {
                     isInStartIcon = false
 
-                    timeChangeListener?.onStartChanged(
+                    timeChangedListener?.onStartChanged(
                         startHours.toInt(),
                         getHoursMinute(startHours)
                     )
@@ -272,7 +272,7 @@ class ClockSlider @JvmOverloads constructor(
                 } else if (isInEndIcon) {
                     isInEndIcon = false
 
-                    timeChangeListener?.onEndChanged(
+                    timeChangedListener?.onEndChanged(
                         endHours.toInt(),
                         getHoursMinute(endHours)
                     )
@@ -290,7 +290,7 @@ class ClockSlider @JvmOverloads constructor(
     }
 
     fun setOnTimeChangedListener(listener: OnTimeChangedListener) {
-        timeChangeListener = listener
+        timeChangedListener = listener
     }
 
     private fun obtainStyledAttributes(attrs: AttributeSet?, defStyleAttr: Int) {

@@ -62,7 +62,7 @@ binding.clockSlider.setOnTimeChangedListener(object : ClockSlider.OnTimeChangedL
 ```
 
 ## 屬性
-| 屬性 | 類別 | 默認值 | 說明 |
+| 屬性 | 類型 | 默認值 | 說明 |
 | :------| :------ | :------ | :------ |
 | cc_borderWidth | dimension | 72f | 邊框寬度 |
 | cc_metricTextSize | dimension | 130f | 度量文字大小 |
