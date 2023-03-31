@@ -438,17 +438,19 @@ class ClockSlider @JvmOverloads constructor(
     }
 
     private fun renderPeriodText(canvas: Canvas) {
+        val start = startHours.toInt() * 60 + getHoursMinute(startHours)
+        val end = endHours.toInt() * 60 + getHoursMinute(endHours)
         val time = when {
-            endHours >= startHours -> endHours - startHours
-            is24HR -> endHours - startHours + 24
-            else -> endHours - startHours + 12
+            end >= start -> end - start
+            is24HR -> end - start + 24 * 60
+            else -> end - start + 12 * 60
         }
 
         canvas.drawTextCentred(
             if (metricMode == MetricMode.COUNTER)
-                decimalFormat.format(time) else "%02d:%02d".format(
-                time.toInt(),
-                getHoursMinute(time)
+                decimalFormat.format(time / 60 + ((time % 60).toFloat() / 100)) else "%02d:%02d".format(
+                time / 60,
+                time % 60
             ),
             width / 2f,
             height / 2f,

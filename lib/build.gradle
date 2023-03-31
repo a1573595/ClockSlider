@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 33
 
     defaultConfig {
         minSdk 16
@@ -24,10 +24,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.a1573595.clockslider'
 }
 
 dependencies {
-    compileOnly 'androidx.core:core-ktx:1.7.0'
+    compileOnly 'androidx.core:core-ktx:1.9.0'
 }
 
 afterEvaluate {
