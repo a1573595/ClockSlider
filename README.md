@@ -28,7 +28,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.a1573595:ClockSlider:1.0.1'
+    implementation 'com.github.a1573595:ClockSlider:v1.0.1'
 }
 ```
 
