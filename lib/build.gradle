@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    compileOnly 'androidx.core:core-ktx:1.9.0'
+    compileOnly 'androidx.core:core-ktx:1.10.1'
 }
 
 afterEvaluate {

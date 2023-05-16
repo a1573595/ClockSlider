@@ -30,10 +30,18 @@
         android:text="Add Hour" />
 
     <Button
-        android:id="@+id/btnEnable"
+        android:id="@+id/btnStartEnable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="Enable" />
+        android:text="Enable Start" />
+
+    <Button
+        android:id="@+id/btnEndEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Enable End" />
 </LinearLayout>

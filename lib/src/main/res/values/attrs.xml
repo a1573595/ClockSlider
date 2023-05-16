@@ -8,6 +8,8 @@
         <attr name="cc_tickTextColor" format="color" />
         <attr name="cc_startIconResource" format="reference" />
         <attr name="cc_endIconResource" format="reference" />
+        <attr name="cc_isStartEnabled" format="boolean" />
+        <attr name="cc_isEndEnabled" format="boolean" />
         <attr name="cc_is24HR" format="boolean" />
         <attr name="cc_startHour" format="float" />
         <attr name="cc_endHour" format="float" />

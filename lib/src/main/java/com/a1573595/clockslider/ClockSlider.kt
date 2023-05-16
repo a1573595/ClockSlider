@@ -162,6 +162,9 @@ class ClockSlider @JvmOverloads constructor(
 
     private var _angleOfAnHour = 30
 
+    var isStartEnabled: Boolean = true
+    var isEndEnabled: Boolean = true
+
     private var is24HR = false
         set(value) {
             field = value
@@ -231,13 +234,13 @@ class ClockSlider @JvmOverloads constructor(
     override fun onTouchEvent(event: MotionEvent): Boolean {
         when (event.action and event.actionMasked) {
             MotionEvent.ACTION_DOWN -> {
-                if (inStartCircleButton(event.x, event.y) && isEnabled) {
+                if (inStartCircleButton(event.x, event.y) && isEnabled && isStartEnabled) {
                     isInStartIcon = true
                     preRadian = getRadian(event.x, event.y)
 
                     parent.requestDisallowInterceptTouchEvent(true)
                     return true
-                } else if (inEndCircleButton(event.x, event.y) && isEnabled) {
+                } else if (inEndCircleButton(event.x, event.y) && isEnabled && isEndEnabled) {
                     isInEndIcon = true
                     preRadian = getRadian(event.x, event.y)
 
@@ -245,14 +248,15 @@ class ClockSlider @JvmOverloads constructor(
                     return true
                 }
             }
+
             MotionEvent.ACTION_MOVE -> {
-                if (isInStartIcon && isEnabled) {
+                if (isInStartIcon && isEnabled && isStartEnabled) {
                     val tempRadian = getRadian(event.x, event.y)
                     currentStartRadian = getCurrentRadian(currentStartRadian, tempRadian)
 
                     startHours = radianToHours(currentStartRadian)
                     return true
-                } else if (isInEndIcon && isEnabled) {
+                } else if (isInEndIcon && isEnabled && isEndEnabled) {
                     val tempRadian = getRadian(event.x, event.y)
                     currentEndRadian = getCurrentRadian(currentEndRadian, tempRadian)
 
@@ -260,6 +264,7 @@ class ClockSlider @JvmOverloads constructor(
                     return true
                 }
             }
+
             MotionEvent.ACTION_UP -> {
                 if (isInStartIcon) {
                     isInStartIcon = false
@@ -328,6 +333,8 @@ class ClockSlider @JvmOverloads constructor(
                 R.styleable.ClockSlider_cc_endIconResource,
                 _endIconResource
             )
+            isStartEnabled = it.getBoolean(R.styleable.ClockSlider_cc_isStartEnabled, isStartEnabled)
+            isEndEnabled = it.getBoolean(R.styleable.ClockSlider_cc_isEndEnabled, isEndEnabled)
             is24HR = it.getBoolean(R.styleable.ClockSlider_cc_is24HR, is24HR)
             startHours = it.getFloat(R.styleable.ClockSlider_cc_startHour, startHours)
             endHours = it.getFloat(R.styleable.ClockSlider_cc_endHour, endHours)

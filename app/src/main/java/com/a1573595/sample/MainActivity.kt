@@ -30,8 +30,12 @@ class MainActivity : AppCompatActivity() {
             binding.clockSlider.startHours += 1
         }
 
-        binding.btnEnable.setOnClickListener {
-            binding.clockSlider.isEnabled = !binding.clockSlider.isEnabled
+        binding.btnStartEnable.setOnClickListener {
+            binding.clockSlider.isStartEnabled = !binding.clockSlider.isStartEnabled
+        }
+
+        binding.btnEndEnable.setOnClickListener {
+            binding.clockSlider.isEndEnabled = !binding.clockSlider.isEndEnabled
         }
     }
 }
