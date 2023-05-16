@@ -28,7 +28,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.a1573595:ClockSlider:v1.0.1'
+    implementation 'com.github.a1573595:ClockSlider:v1.1.0'
 }
 ```
 
@@ -62,19 +62,21 @@ binding.clockSlider.setOnTimeChangedListener(object : ClockSlider.OnTimeChangedL
 ```
 
 ## Attribute
-| Attribute | Type | Default | Description |
-| :------| :------ | :------ | :------ |
-| cc_borderWidth | dimension | 72f | border width |
-| cc_metricTextSize | dimension | 130f | metric text size |
-| cc_borderColor | color | #CCCCCC | border color |
-| cc_fillColor | color | #FFFF00 | border fill color |
-| cc_tickTextColor | color | #000000 | tick text color |
-| cc_startIconResource | reference | android.R.drawable.btn_star_big_on | start icon resource |
-| cc_endIconResource | reference | android.R.drawable.btn_star_big_off | end icon resource |
-| cc_is24HR | boolean | false | 12HR or 24HR |
-| cc_startHour | float | 0f | start hour |
-| cc_endHour | float | 0f | end hour |
-| cc_metricMode | enum | counter | metric text mode |
+| Attribute            | Type      | Default                             | Description         |
+|:---------------------|:----------|:------------------------------------|:--------------------|
+| cc_borderWidth       | dimension | 72f                                 | border width        |
+| cc_metricTextSize    | dimension | 130f                                | metric text size    |
+| cc_borderColor       | color     | #CCCCCC                             | border color        |
+| cc_fillColor         | color     | #FFFF00                             | border fill color   |
+| cc_tickTextColor     | color     | #000000                             | tick text color     |
+| cc_startIconResource | reference | android.R.drawable.btn_star_big_on  | start icon resource |
+| cc_endIconResource   | reference | android.R.drawable.btn_star_big_off | end icon resource   |
+| cc_isStartEnabled    | boolean   | true                                | start icon enabled  |
+| cc_isEndEnabled      | boolean   | true                                | end icon enabled    |
+| cc_is24HR            | boolean   | false                               | 12HR or 24HR        |
+| cc_startHour         | float     | 0f                                  | start hour          |
+| cc_endHour           | float     | 0f                                  | end hour            |
+| cc_metricMode        | enum      | counter                             | metric text mode    |
 
 ## Reference
 [HGCircularSlider](https://github.com/HamzaGhazouani/HGCircularSlider)
